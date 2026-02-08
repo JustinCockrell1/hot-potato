@@ -108,6 +108,7 @@ function startRound() {
             // for(const player of players) {
             //     player.close()
             // }
+            restartGame()
 
         }
     }, 20000)
