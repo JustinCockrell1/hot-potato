@@ -7,6 +7,8 @@ let gameStarted = false
 
 let timeoutId:NodeJS.Timeout;
 
+const PORT = process.env.PORT || 3000
+
 const server = Bun.serve({
   fetch: (req, server)=> {
     // upgrade the request to a WebSocket
@@ -62,7 +64,7 @@ const server = Bun.serve({
     }, // a socket is closed
     drain(ws) {}, // the socket is ready to receive more data
   },
-  port: 3000,
+  port: PORT,
   routes: {
     "/": index,
     "/figlet": () => { 
