@@ -1,5 +1,5 @@
 console.log("hello");
-const test = new WebSocket("ws://localhost:3000")
+const test = new WebSocket("wss://hot-potato-42gu.onrender.com")
 const body = document.getElementById("body")!
 
 let myPosition = -1;
